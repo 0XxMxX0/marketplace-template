@@ -1,0 +1,382 @@
+<?php
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+?>
+<!doctype html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Marketplace</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+        <!-- FONT FAMILY -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+        <!-- ICONS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="icon" type="imagem/png" href="https://ipa-edu.com.br/ipasisteste/moduloespecial/icon.png"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+  <body>
+
+    <div class="modal fade"  id="sair" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Deseja sair da conta?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Você esta preste a deslogar da sua conta
+                </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-error-active">Sair da conta</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade"  id="excluir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Deseja cancelar esse produto?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Você esta preste o seguinte produto:
+                </p>
+                <span class="modal-product-cancelar">Bebida: Coca-Cola</span>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-error-active">Cancelar Produto</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade"  id="excluir-produtos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Deseja cancelar esses produtos?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Você esta preste a cancelar os seguintes <span class='fw-bold'>2 produtos</span>.
+                </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-error-active">Cancelar Produto</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="content" class="row">
+        <div class="col-4 nav-bar">
+            
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <div id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class='nav-item'>
+                                <a aria-current='page' data-page='$name' href='index.html'>
+                                    <img src="brand.png"  class="img-thumbnail img-brand border border-dark rounded-pill" alt="...">
+                                </a>
+                            </li>
+                            <li class="nav-item mt-4"></li>
+                            <li class='nav-item'>
+                                <a class='nav-link' aria-current='page' data-page='$name' href='index.html'>
+                                    <i class='bi bi-house-door-fill bi-navbar'></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class='nav-item'>
+                                <a id='active' class='nav-link' aria-current='page' data-page='$name' href='produto.html'>
+                                    <i class='bi bi-box-seam-fill bi-navbar'></i>
+                                    <span>Produtos</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        
+        <div id="content" class="col ml-4 p-4">
+            
+            <div class="row justify-content-between">
+                <div class="m-0 p-0 col-8">
+                    <h6 class="m-0">Marketplace</h6>
+                    <h4>Produtos</h4>
+                </div>               
+                              
+                <div class="text-right col">
+                    <a class="perfil-bar-text btn-action-bar btn-mini dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="dropdown-text-bar fw-bold">Matheus</span>
+                    </a>
+                    <img src="perfil.jpg" width="50" class="img-thumbnail border rounded-pill" alt="...">
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#excluir-produtos">
+                                <i class="bi bi-person-circle bi-min-icon"></i>
+                                Meu perfil
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#sair" data-bs-toggle="modal" data-bs-target="#sair">
+                                <i class="bi bi-box-arrow-left bi-min-icon"></i>
+                                Sair
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <h5>Overview</h5>
+                <div id='card-importate'  class='card m-2 text-left important'>
+                    <div class='card-body'>
+                        <i class='bi bi-bar-chart-steps bi-card'></i>
+                        <h6 class='card-subtitle mb-2'>Cadastrados</h6>
+                        <h6 class='card-subtitle card-price mb-2'>3 produtos</h6>
+                    </div>
+                </div>
+                <div class='card m-2 text-left important'>
+                    <div class='card-body'>
+                        <i class="bi bi-x-circle-fill bi-card"></i>
+                        <h6 class='card-subtitle mb-2'>Cancelados</h6>
+                        <h6 class='card-subtitle card-price  mb-2'>1 produto</h6>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row  my-2">
+                <div class="col-8">
+                    <a class="btn btn-action-bar btn-mini"> 
+                        <i class="bi bi-filter bi-action-bar bi-min-icon"></i>
+                        <span>Filtro</span>
+                    </a>
+                    <a class="btn btn-action-bar btn-mini dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span  class="dropdown-text-bar">Mais opções</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#excluir-produtos">
+                                <i class="bi bi-x-circle bi-action-bar bi-min-icon"></i>
+                                Cancelar Selecionados
+                            </a>
+                        </li>
+                    </ul>
+                    </a>
+                    <a href="add_produtos.html" class="btn btn-action-bar btn-mini btn-important text-dark"> 
+                        <i class="bi bi-filter bi-plus-circle bi-action-bar bi-min-icon"></i>
+                        <span>Cadastrar Produto</span>
+                    </a>
+                </div>
+                <div class="col input-group">
+                    <button class="btn btn-action-bar btn-mini" type="button" id="button-addon1">
+                        <i class="bi bi-search bi-search"></i>
+                    </button>
+                    <input type="search" class="form-control" aria-label="Example text with button addon" placeholder="Pesquisar produto" aria-describedby="button-addon1">
+                </div>
+            </div>
+
+            <div class="row mb-0">
+              <table id='table' class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        </div>
+                    </th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Estoque</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        </div>
+                    </th>
+                    <td>
+                        <img src="https://i.pinimg.com/564x/3d/c8/35/3dc835e71d184aa3c477a8d916c5a396.jpg" width="50" class="img-thumbnail border-0" alt="...">
+                        Fini Melancia
+                    </td>
+                    <td>R$8,00</td>
+                    <td>Doces</td>
+                    <td>0 un</td>
+                    <td><span id="badget" class="badge text-bg-secondary">Cancelada</span></td>
+                    <td>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-outline-secondary btn-action" data-bs-toggle="modal" data-bs-target="#excluir"><i class="bi bi-x-circle bi-min-icon"></i></button>
+                        <button type="button" class="btn btn-outline-secondary btn-action"><i class="bi bi-pencil-square bi-min-icon"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        </div>
+                    </th>
+                    <td>
+                        <img src="https://i.pinimg.com/564x/70/89/70/708970b898ef1a4da13cae39f82a051e.jpg" width="50" class="img-thumbnail border-0" alt="...">
+                        Doritos
+                    </td>
+                    <td>R$3,00</td>
+                    <td>Biscoito</td>
+                    <td>10 un</td>
+                    <td><span class="badge badget">ativado</span></td>
+                    <td>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-outline-secondary btn-action" data-bs-toggle="modal" data-bs-target="#excluir"><i class="bi bi-x-circle bi-min-icon"></i></button>
+                        <button type="button" class="btn btn-outline-secondary btn-action"><i class="bi bi-pencil-square bi-min-icon"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        </div>
+                    </th>
+                    <td>
+                        <img src="https://i.pinimg.com/564x/4e/a9/47/4ea94754274457a5ebab344b99b2acaa.jpg" width="50" class="img-thumbnail border-0" alt="...">
+                        Coca Cola 2.5L
+                    </td>
+                    <td>R$12,00</td>
+                    <td>Bebida</td>
+                    <td>6 un</td>
+                    <td><span class="badge badget">ativado</span></td>
+                    <td>
+                      <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <button type="button" class="btn btn-outline-secondary btn-action" data-bs-toggle="modal" data-bs-target="#excluir"><i class="bi bi-x-circle bi-min-icon"></i></button>
+                        <button type="button" class="btn btn-outline-secondary btn-action"><i class="bi bi-pencil-square bi-min-icon"></i></button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <nav aria-label="...">
+                <ul class="pagination">
+                  <li class="page-item disabled">
+                    <a class="page-link">Previous</a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item" aria-current="page">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        
+        let content = document.querySelector('.content-seach');
+        let inputSeach = document.querySelector("input[type='search']");
+
+        let items = [];
+        
+        function addHTML() {
+
+            content.innerHTML = "";
+
+            let filterItens = items.filter((item) =>
+                item.name.toLowerCase().includes(inputSeach.value.toLowerCase()));
+            
+            if(filterItens.length == 0){
+
+                let message = document.createElement('div');
+                message.textContent = 'Ferramenta não encontrada!';
+            } else {
+                
+                filterItens.forEach((item) => {
+                    console.log(item);
+                    const div = document.createElement("div");
+                    const a = document.createElement("a");
+                    a.innerHTML = item.name;
+                    a.href = item.href;
+                    a.classList = 'link_itemSearch';
+                    a.target = "_blank";
+                    div.classList = 'itemSearch';
+                    div.append(a);
+                    content.append(div);
+                });
+            }
+        }
+
+        fetch("features.json")
+            .then((data) => data.json())
+            .then((paginas) => {
+            
+            for(const key in paginas){
+                if(paginas.hasOwnProperty(key)){
+
+                    paginas[key].forEach((pagina) => {
+                        let pag = {
+                            name: pagina.name,
+                            href: pagina.href
+                        }
+                        items.push(pag);
+                    });
+                };
+            };
+        });
+
+        inputSeach.addEventListener('input', function () {
+            addHTML();
+        });
+
+        document.addEventListener('click', function (event) {
+            if(!inputSeach.contains(event.target)){
+                content.innerHTML = "";
+            }
+        });
+
+
+    </script> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.toast').toast('show');
+      });
+        const myModal = document.getElementById('excluir')
+        const myInput = document.getElementById('myInput')
+
+            myModal.addEventListener('shown.bs.modal', () => {
+            myInput.focus()
+        })
+    </script>
+    </body>
+</html>
