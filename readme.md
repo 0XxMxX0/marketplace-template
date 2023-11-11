@@ -35,9 +35,12 @@
 - `Login de Vendedor`: Implementação de um sistema de autenticação para garantir a segurança e controle de acesso.
 - `Impressão de Histórico de Vendas`: Desenvolvimento da capacidade de gerar relatórios de histórico de vendas em formato PDF.
 
+# Demostração do projeto ✨
+
+[![Assista à demonstração do projeto](marketplace-apresentacao.mp4)
 # Tecnologias Utilizadas no Projeto 🌐
 
-[![My Skills](https://skills.thijs.gg/icons?i=laravel,php,html,bootstrap&theme=dark)](https://skills.thijs.gg)
+[![My Skills](https://skills.thijs.gg/icons?i=laravel,html,bootstrap&theme=dark)](https://skills.thijs.gg)
 
 # Criador 🐱‍👤
 
