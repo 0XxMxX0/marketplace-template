@@ -25,19 +25,16 @@
 # Funcionalidades do projeto ⚙
 
 ### Funcionalidades Concluídas 🏆
-- `Cadastro de Vendas`: Registro completo das vendas, incluindo detalhes como data, produtos e preço unitário e total da transação.
-- `Formas de Pagamento`: Seleção e registro de diversas opções de pagamento, como dinheiro e cartão de crédito.
-- `Gestão de Clientes`: Associação do nome do cliente a cada venda, facilitando o acompanhamento individualizado e a construção de um banco de dados confiável.
-- `Atualização de Vendas`: Possibilidade de realizar atualizações nas informações das vendas já registradas, como correção de preços ou nome do cliente.
-- `Exclusão de Vendas`: Remoção de registros de vendas quando necessário, contribuindo para a organização e limpeza do banco de dados.
+- `Cadastro de produto`: Registro completo das produtos.
+
 
 ### Funcionalidades Futuras 📌
-- `Login de Vendedor`: Implementação de um sistema de autenticação para garantir a segurança e controle de acesso.
-- `Impressão de Histórico de Vendas`: Desenvolvimento da capacidade de gerar relatórios de histórico de vendas em formato PDF.
-
+- `Cadastro de venda` : Registro completo de uma venda.
+  
 # Demostração do projeto ✨
 
-[![Assista à demonstração do projeto](marketplace-apresentacao.mp4)
+https://github.com/0XxMxX0/marketplace-template/assets/83671782/e7ea147a-9d43-439d-b64e-f7b37f2fecad
+
 # Tecnologias Utilizadas no Projeto 🌐
 
 [![My Skills](https://skills.thijs.gg/icons?i=laravel,html,bootstrap&theme=dark)](https://skills.thijs.gg)
