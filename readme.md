@@ -3,7 +3,7 @@
 </h1>
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=VERSÃO&message=1.0.0&color=A03D99&style=for-the-badge)
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=DATA%20DA%20CRIAÇÃO&message=MAI/23&color=A03D99&style=for-the-badge)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=DATA%20DA%20CRIAÇÃO&message=NOV/23&color=A03D99&style=for-the-badge)
 
 > **Projeto de Administração de Marketplaces em Laravel**
 
