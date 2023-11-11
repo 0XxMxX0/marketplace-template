@@ -59,31 +59,31 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
             </div>
             <div class="modal-body">
                 <p>
-                    Você esta preste o seguinte produto:
+                    Você esta preste a seguinte venda:
                 </p>
-                <span class="modal-product-cancelar">Bebida: Coca-Cola</span>
+                <span class="modal-product-cancelar">venda [#111] | valor total: R$150,00</span>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-error-active">Cancelar Produto</button>
+              <button type="button" class="btn btn-error-active">Cancelar Venda</button>
             </div>
           </div>
         </div>
     </div>
 
-    <div class="modal fade"  id="excluir-produtos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade"  id="excluir-vendas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Deseja cancelar esses produtos?</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Deseja cancelar essas vendas?<h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <p>
-                    Você esta preste a cancelar os seguintes <span class='fw-bold'>2 produtos</span>.
+                    Você esta preste a cancelar os seguintes <span class='fw-bold'>2 Vendas</span>.
                 </p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-error-active">Cancelar Produto</button>
+              <button type="button" class="btn btn-error-active">Cancelar Vendas</button>
             </div>
           </div>
         </div>
@@ -111,13 +111,13 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
                                 </a>
                             </li>
                             <li class='nav-item'>
-                                <a id='active' class='nav-link' aria-current='page' data-page='$name' href='produto.html'>
+                                <a class='nav-link' aria-current='page' data-page='$name' href='produto.html'>
                                     <i class='bi bi-box-seam-fill icon-navbar'></i>
                                     <span>Produtos</span>
                                 </a>
                             </li>
                             <li class='nav-item'>
-                                <a class='nav-link' aria-current='page' data-page='$name' href='vendas.html'>
+                                <a id='active' class='nav-link' aria-current='page' data-page='$name' href='vendas.html'>
                                     <i class="fa-solid fa-messages-dollar icon-fa"></i>
                                     <span>Vendas</span>
                                 </a>
@@ -134,7 +134,7 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
             <div class="row justify-content-between">
                 <div class="m-0 p-0 col-8">
                     <h6 class="m-0">Marketplace</h6>
-                    <h4>Produtos</h4>
+                    <h4>Vendas</h4>
                 </div>               
                               
                 <div class="text-right col">
@@ -144,7 +144,7 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
                     <img src="assent/perfil.jpg" width="50" class="img-thumbnail border rounded-pill" alt="...">
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#excluir-produtos">
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#excluir-vendas">
                                 <i class="bi bi-person-circle icon-min"></i>
                                 Meu perfil
                             </a>
@@ -164,15 +164,22 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
                 <div id='card-importate'  class='card m-2 text-left important'>
                     <div class='card-body'>
                         <i class='bi bi-bar-chart-steps icon-card'></i>
-                        <h6 class='card-subtitle mb-2'>Cadastrados</h6>
-                        <h6 class='card-subtitle card-price mb-2'>3 produtos</h6>
+                        <h6 class='card-subtitle mb-2'>Registradas</h6>
+                        <h6 class='card-subtitle card-price mb-2'>3 vendas</h6>
+                    </div>
+                </div>
+                <div class='card m-2 text-left important'>
+                    <div class='card-body'>
+                        <i class="fa-solid fa-money-check-dollar-pen icon-card fs-1 mb-1"></i>
+                        <h6 class='card-subtitle mb-2'>Editadas</h6>
+                        <h6 class='card-subtitle card-price  mb-2'>1 venda</h6>
                     </div>
                 </div>
                 <div class='card m-2 text-left important'>
                     <div class='card-body'>
                         <i class="bi bi-x-circle-fill icon-card"></i>
-                        <h6 class='card-subtitle mb-2'>Cancelados</h6>
-                        <h6 class='card-subtitle card-price  mb-2'>1 produto</h6>
+                        <h6 class='card-subtitle mb-2'>Canceladas</h6>
+                        <h6 class='card-subtitle card-price  mb-2'>1 venda</h6>
                     </div>
                 </div>
             </div>
@@ -188,23 +195,23 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#excluir-produtos">
+                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#excluir-vendas">
                                 <i class="bi bi-x-circle icon-actionBar icon-min"></i>
-                                Cancelar Selecionados
+                                Cancelar Selecionadas
                             </a>
                         </li>
                     </ul>
                     </a>
                     <a href="add_produtos.html" class="btn btn-action-bar btn-mini btn-important text-dark"> 
                         <i class="bi bi-filter bi-plus-circle icon-actionBar icon-min"></i>
-                        <span>Cadastrar Produto</span>
+                        <span>Registrar Venda</span>
                     </a>
                 </div>
                 <div class="col input-group">
                     <button class="btn btn-action-bar btn-mini" type="button" id="button-addon1">
                         <i class="bi bi-search bi-search"></i>
                     </button>
-                    <input type="search" class="form-control" aria-label="Example text with button addon" placeholder="Pesquisar produto" aria-describedby="button-addon1">
+                    <input type="search" class="form-control" aria-label="Example text with button addon" placeholder="Pesquisar venda" aria-describedby="button-addon1">
                 </div>
             </div>
 
@@ -212,34 +219,34 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
               <table id='table' class="table">
                 <thead>
                   <tr>
-                    <th scope="col ">
+                    <th class="container-form-check" scope="col">
                         <div class="text-center form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
                         </div>
                     </th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Preço</th>
-                    <th scope="col">Categoria</th>
-                    <th scope="col">Estoque</th>
+                    <th scope="col">Vendedor</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Cliente</th>
                     <th scope="col">Status</th>
                     <th scope="col">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">
+                    <th class="container-form-check" scope="row">
                         <div class="text-center form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
                         </div>
                     </th>
                     <td>
-                        <img src="https://i.pinimg.com/564x/3d/c8/35/3dc835e71d184aa3c477a8d916c5a396.jpg" width="50" class="img-thumbnail border-0" alt="...">
-                        Fini Melancia
+                      <img src="assent/perfil.jpg" width="50" class="img-thumbnail border rounded-pill" alt="...">
+                      Matheus
                     </td>
-                    <td>R$8,00</td>
-                    <td>Doces</td>
-                    <td>0 un</td>
-                    <td><span id="badget" class="badge text-bg-secondary">Cancelada</span></td>
+                    <td>R$25,00</td>
+                    <td>Ana Clara</td>
+                    <td>12/10/2023</td>
+                    <td><span id="badget" class="badge badget">ativada </span></td>
                     <td>
                       <div class="btn-group" role="group" aria-label="Basic outlined example">
                         <button type="button" class="btn btn-outline-secondary btn-action" data-bs-toggle="modal" data-bs-target="#excluir"><i class="bi bi-x-circle icon-min"></i></button>
@@ -248,19 +255,19 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">
+                    <th class="container-form-check" scope="row">
                         <div class="text-center form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
                         </div>
                     </th>
                     <td>
-                        <img src="https://i.pinimg.com/564x/70/89/70/708970b898ef1a4da13cae39f82a051e.jpg" width="50" class="img-thumbnail border-0" alt="...">
-                        Doritos
+                      <img src="assent/perfil.jpg" width="50" class="img-thumbnail border rounded-pill" alt="...">
+                      Matheus
                     </td>
-                    <td>R$3,00</td>
-                    <td>Biscoito</td>
-                    <td>10 un</td>
-                    <td><span class="badge badget">ativado</span></td>
+                    <td>R$25,00</td>
+                    <td>Ana Clara</td>
+                    <td>12/10/2023</td>
+                    <td><span id="badget" class="badge badget">ativada </span></td>
                     <td>
                       <div class="btn-group" role="group" aria-label="Basic outlined example">
                         <button type="button" class="btn btn-outline-secondary btn-action" data-bs-toggle="modal" data-bs-target="#excluir"><i class="bi bi-x-circle icon-min"></i></button>
@@ -269,19 +276,19 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
                     </td>
                   </tr>
                   <tr>
-                    <th scope="row">
+                    <th class="container-form-check" scope="row">
                         <div class="text-center form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
                         </div>
                     </th>
                     <td>
-                        <img src="https://i.pinimg.com/564x/4e/a9/47/4ea94754274457a5ebab344b99b2acaa.jpg" width="50" class="img-thumbnail border-0" alt="...">
-                        Coca Cola 2.5L
+                      <img src="assent/perfil.jpg" width="50" class="img-thumbnail border rounded-pill" alt="...">
+                      Matheus
                     </td>
-                    <td>R$12,00</td>
-                    <td>Bebida</td>
-                    <td>6 un</td>
-                    <td><span class="badge badget">ativado</span></td>
+                    <td>R$25,00</td>
+                    <td>Ana Clara</td>
+                    <td>12/10/2023</td>
+                    <td><span id="badget" class="badge badget">ativada </span></td>
                     <td>
                       <div class="btn-group" role="group" aria-label="Basic outlined example">
                         <button type="button" class="btn btn-outline-secondary btn-action" data-bs-toggle="modal" data-bs-target="#excluir"><i class="bi bi-x-circle icon-min"></i></button>
@@ -289,6 +296,7 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
                       </div>
                     </td>
                   </tr>
+                 
                 </tbody>
               </table>
               <nav aria-label="...">
