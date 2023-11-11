@@ -462,5 +462,15 @@ input[type="file"] {
   .nav-bar {
       display: none;
       margin-bottom: 70px;
+      background-color: red;
+  }
+}
+
+@media screen and (min-width: 1300px){
+  
+  body{
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ffffff;
+    max-width: 1850px;
   }
 }
