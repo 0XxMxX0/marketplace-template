@@ -225,6 +225,10 @@ a {
 a:hover{
   text-decoration: none;
 }
+.link, .link:not([href]):not([tabindex]) {
+  color: #a03d99;
+}
+
 
 /* --------------------- ---------------------*/
 
@@ -321,6 +325,22 @@ border: 0;
 background-color: #ffffff;
 }
 
+.container-pagamento .btn-pagamento:hover {
+  border:1px solid #a03d99;
+  color: #a03d99;
+}
+.container-pagamento .btn-pagamento:hover i{
+  color: #a03d99;
+}
+
+.container-pagamento .btn-check:checked+.btn {
+ background-color:#a03d99;
+  color: #ffffff;
+}
+.container-pagamento .btn-check:checked+.btn i{
+  color: #ffffff;
+}
+
 .btn-outline-secondary:not(:disabled):not(.disabled):active {
 background-color: #ffffff;
 }
@@ -348,11 +368,13 @@ color: #ffff;
 
 /* OUTROS */
 
-.form-check-input:checked {
+.form-check-extra:checked, .form-check-input:checked, .form-check-pagamento:checked {
   background-color: #a03d9a;
   border-color: #a03d9a;
 }
-
+.form-check-pagamento {
+  transform: translate(12px,0);
+}
 .form-control {
 height: 100%;
 }
@@ -389,6 +411,12 @@ color: #212529;
 background-color: #a03d9a;
 }
 
+.badget-outline {
+background-color: #ffffff;
+border: 1px solid #a03d9a;
+color: #a03d9a;
+}
+
 /* MODAL */
 .modal-product-cancelar {
 color: #952b4b;
@@ -396,14 +424,14 @@ font-weight: bold;
 }
 
 /* checked */
-.list-group-item .form-check-input {
+.list-group-item .form-check-extra {
   border-radius: 12px;
   border: 1px solid #21232983;
   transform: translate(-4px,0);
 }
 
 /* LISTA DE ETAPA */
-.list-group-etapa-off .form-check-input{
+.list-group-etapa-off .form-check-extra{
   border: 1px solid #2a2c3127;
 }
 
@@ -426,7 +454,7 @@ font-weight: bold;
   border-top: 1px solid #dee2e6;
 }
 
-.form-check {
+.container-form-check .form-check {
   box-sizing: content-box;
   display: flex;
   justify-content: center;
@@ -435,7 +463,7 @@ font-weight: bold;
   align-items: flex-start;
 }
 
-.form-check .form-check-input {
+.container-form-check .form-check .form-check-extra {
   border-color: #21232983;
 }
 
