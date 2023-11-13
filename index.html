@@ -88,7 +88,7 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
             </nav>
         </div>
 
-        <div class="col ml-4 p-4">
+        <div class="col ml-5 p-4">
             
             <div class="row justify-content-between">
                 <div class="m-0 p-0 col">
@@ -120,13 +120,13 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 
             <div class="row my-2">
                 <div class="row w-75">
-                    <h5>Balanço</h5>
+                    <h5>Balanço Financeiro</h5>
                     
                     <div id='card-importate'  class='card m-2 text-left important'>
                         <div class='card-body'>
                             <i class='bi bi-currency-exchange icon-card'></i>
                             <h6 class='card-subtitle mb-2'>Total vendido</h6>
-                            <h6 class='card-subtitle card-price mb-2'>R$24,00</h6>
+                            <h6 class='card-subt itle ca d-price mb-2'>R$24,00</h6>
                         </div>
                     </div>
 
@@ -146,9 +146,48 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
                     </div>
                 </div>
             </div>
+            <div class="row my-2">
+                <div class="row w-75">
+                    <h5>Fluxo de caixa</h5>
+                    <canvas  style="max-width:500px; max-height: 250px"id="myChart"></canvas>
+                </div>
+            </div>
         </div>
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Set','Nov'],
+            datasets: [{
+              label: 'Saidas',
+              data: [0,12],
+              borderWidth: 1,
+              borderColor: '#000',
+              backgroundColor: '#a03d99',
+            },{
+              label: 'Entradas',
+              data: [12,0],
+              borderWidth: 1,
+              borderColor: '#a03d99',
+              backgroundColor: '#ffff',
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+       
     <script>
         
         let content = document.querySelector('.content-seach');
