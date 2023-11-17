@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="pt-BR">
 
@@ -127,7 +126,7 @@
 
         </div>
         
-        <div id="content" class="col ml-4 p-4">
+        <div id="content" class="col ml-5 p-4">
             
             <div class="row justify-content-between">
                 <div class="m-0 p-0 col-8">
@@ -157,168 +156,19 @@
                 </div>
             </div>
 
-            <div class="row">
-                <h5>Overview</h5>
-                <div id='card-importate'  class='card m-2 text-left important'>
-                    <div class='card-body'>
-                        <i class='bi bi-bar-chart-steps icon-card'></i>
-                        <h6 class='card-subtitle mb-2'>Registradas</h6>
-                        <h6 class='card-subtitle card-price mb-2'>3 vendas</h6>
-                    </div>
-                </div>
-                <div class='card m-2 text-left important'>
-                    <div class='card-body'>
-                        <i class="fa-solid fa-money-check-dollar-pen icon-card fs-1 mb-1"></i>
-                        <h6 class='card-subtitle mb-2'>Editadas</h6>
-                        <h6 class='card-subtitle card-price  mb-2'>1 venda</h6>
-                    </div>
-                </div>
-                <div class='card m-2 text-left important'>
-                    <div class='card-body'>
-                        <i class="bi bi-x-circle-fill icon-card"></i>
-                        <h6 class='card-subtitle mb-2'>Canceladas</h6>
-                        <h6 class='card-subtitle card-price  mb-2'>1 venda</h6>
-                    </div>
-                </div>
+            <div class="row text-center my-5">
+                <i class="fa-solid fa-badge-check icon-fa my-3"></i>
+                <h5>Venda realizada com sucesso!</h5>
             </div>
-            
-            <div class="row  my-2">
-                <div class="col-8">
-                    <a class="btn btn-action-bar btn-mini"> 
-                        <i class="bi bi-filter icon-actionBar icon-min"></i>
-                        <span>Filtro</span>
-                    </a>
-                    <a class="btn btn-action-bar btn-mini dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span  class="dropdown-text-bar">Mais opções</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#excluir-vendas">
-                                <i class="bi bi-x-circle icon-actionBar icon-min"></i>
-                                Cancelar Selecionadas
-                            </a>
-                        </li>
-                    </ul>
-                    </a>
-                    <a href="registar_vendas.html" class="btn btn-action-bar btn-mini btn-important text-dark"> 
-                        <i class="bi bi-filter bi-plus-circle icon-actionBar icon-min"></i>
-                        <span>Registrar Venda</span>
-                    </a>
-                </div>
-                <div class="col input-group">
-                    <button class="btn btn-action-bar btn-mini" type="button" id="button-addon1">
-                        <i class="bi bi-search bi-search"></i>
-                    </button>
-                    <input type="search" class="form-control" aria-label="Example text with button addon" placeholder="Pesquisar venda" aria-describedby="button-addon1">
-                </div>
-            </div>
-
-            <div class="row mb-0">
-              <table id='table' class="table">
-                <thead>
-                  <tr>
-                    <th class="container-form-check" scope="col">
-                        <div class="text-center form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                        </div>
-                    </th>
-                    <th scope="col">Vendedor</th>
-                    <th scope="col">Valor</th>
-                    <th scope="col">Forma de Pagamento</th>
-                    <th scope="col">Cliente</th>
-                    <th scope="col">Data</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th class="container-form-check" scope="row">
-                        <div class="text-center form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                        </div>
-                    </th>
-                    <td>
-                      <img src="assent/perfil.jpg" width="50" class="img-thumbnail border rounded-pill" alt="...">
-                      Matheus
-                    </td>
-                    <td>R$25,00</td>
-                    <td>Cartão de credito</td>
-                    <td>Ana Clara</td>
-                    <td>12/10/2023</td>
-                    <td><span id="badget" class="badge badget text-bg-secondary">Cancelada</span></td>
-                    <td>
-                      <div class="btn-group" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btn-outline-secondary btn-action" data-bs-toggle="modal" data-bs-target="#excluir"><i class="bi bi-x-circle icon-min"></i></button>
-                        <a href="editar_vendas.html" class="btn btn-outline-secondary btn-action"><i class="bi bi-pencil-square icon-min"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th class="container-form-check" scope="row">
-                        <div class="text-center form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                        </div>
-                    </th>
-                    <td>
-                      <img src="assent/perfil.jpg" width="50" class="img-thumbnail border rounded-pill" alt="...">
-                      Matheus
-                    </td>
-                    <td>R$25,00</td>
-                    <td>Cartão de credito</td>
-                    <td>Ana Clara</td>
-                    <td>12/10/2023</td>
-                    <td><span id="badget" class="badge badget-outline">Editado</span></td>
-                    <td>
-                      <div class="btn-group" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btn-outline-secondary btn-action" data-bs-toggle="modal" data-bs-target="#excluir"><i class="bi bi-x-circle icon-min"></i></button>
-                        <a href="editar_vendas.html" class="btn btn-outline-secondary btn-action"><i class="bi bi-pencil-square icon-min"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th class="container-form-check" scope="row">
-                        <div class="text-center form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
-                        </div>
-                    </th>
-                    <td>
-                      <img src="assent/perfil.jpg" width="50" class="img-thumbnail border rounded-pill" alt="...">
-                      Matheus
-                    </td>
-                    <td>R$25,00</td>
-                    <td>Dinheiro</td>
-                    <td>Ana Clara</td>
-                    <td>12/10/2023</td>
-                    <td><span id="badget" class="badge badget">ativada</span></td>
-                    <td>
-                      <div class="btn-group" role="group" aria-label="Basic outlined example">
-                        <button type="button" class="btn btn-outline-secondary btn-action" data-bs-toggle="modal" data-bs-target="#excluir"><i class="bi bi-x-circle icon-min"></i></button>
-                        <a href="editar_vendas.html" class="btn btn-outline-secondary btn-action"><i class="bi bi-pencil-square icon-min"></i></a>
-                      </div>
-                    </td>
-                  </tr>
-                 
-                </tbody>
-              </table>
-              <nav aria-label="...">
-                <ul class="pagination">
-                  <li class="page-item disabled">
-                    <a class="page-link">Previous</a>
-                  </li>
-                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item" aria-current="page">
-                    <a class="page-link" href="#">2</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+            <div class="row justify-content-between mt-3">
+              <div class="m-0 p-0 col-8">
+                  <div class="btn-group mt-3" role="group" aria-label="Basic outlined example">
+                      <a href="registar_vendas.html" class="btn">Registrar nova venda</a>
+                      <a href="vendas.html" class="btn btn-important">Vendas</a>
+                  </div>
+              </div>               
+          </div>
         </div>
-
     </div>
     <script>
         

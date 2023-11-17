@@ -225,6 +225,7 @@ a {
 a:hover{
   text-decoration: none;
 }
+
 .link, .link:not([href]):not([tabindex]) {
   color: #a03d99;
 }
@@ -269,7 +270,7 @@ font-weight: bold;
 border: 1px solid #04000136;
 }
 
-.btn:hover {
+.btn:hover, a[class='btn']:not([href]):not([tabindex]):hover {
 color: #ffff;
 padding: 15px;
 font-weight: bold;

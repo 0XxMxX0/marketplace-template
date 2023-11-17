@@ -70,7 +70,7 @@
             <div class="row justify-content-between">
                 <div class="m-0 p-0 col-8">
                     <h6 class="m-0">Marketplace</h6>
-                    <h4>Registrar venda</h4>
+                    <h4>Editar venda</h4>
                 </div>               
             </div>
             <form method="get" action="venda_efetuada.html" class="row p-4 needs-validation" novalidate>
@@ -109,8 +109,8 @@
                                         <span name="produto-0" id="produto-0">Doritos</span>
                                     </td>
                                     <td>
-                                        <div class="form-floating ">
-                                            <input type="text" class="form-control" id="floatingInputGroup2" placeholder="Valor de Custo" required>
+                                        <div class="form-floating">
+                                            <input value="2" type="text" class="form-control text-center" id="floatingInputGroup2" placeholder="Valor de Custo" required>
                                             <label for="floatingInputGroup2"></label>
                                         </div>
                                     </td>
@@ -142,20 +142,29 @@
                     <li class="list-group-item list-group-etapa lista-etapas-item border-0 bg-">
                         <input class="form-check-input form-check-extra me-1" type="checkbox" value="" id="secondCheckboxStretched">
                         <span class="lista-etapas-item-etapa">Etapa 2</span>
-                        <h4 class="lista-etapas-item-titulo">Detalhes do cliente</h4>
+                        <h4 class="lista-etapas-item-titulo">Cliente</h4>
 
                         <div class="row g-2 mb-4">
                             <div class="col-md-5">
                                 <div class="form-floating">
                                     <div class="form-floating">
                                         <select class="form-select" id="floatingSelectGrid">
-                                            <option selected>Selecione o cliente</option>
-                                        <option value="1">Ana Clara</option>
-                                        <option value="2" class="btn btn-important">Cadastrar Novo cliente</option>
+                                          <option >Selecione o cliente</option>
+                                          <option selected value="1">Ana Clara</option>
+                                          <option value="2" class="btn btn-important">Cadastrar Novo cliente</option>
                                         </select>
                                         <label for="floatingSelectGrid">Cliente</label>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="form-floating has-validation">
+                                <input type="text" class="form-control" id="name" placeholder="cpf" value="168.524.268-52">
+                                <label for="floatingInputGrid">CPF</label>
+                                <div class="invalid-feedback">
+                                    CPF esta invalido!
+                                </div>
+                            </div>
                             </div>
                         </div>
 
@@ -170,9 +179,10 @@
                             <div class="col container-pagamento">
                                 <div class="col">
                                     <h5 class="fs-6">À vista</h5>
-                                    <input type="radio" class="btn-check" name="options-base" id="option3" autocomplete="off" checked>
+                                    <input type="radio" class="btn-check" name="options-base" id="option3" autocomplete="off">
                                     <label class="btn" for="option3">
-                                    <span><i class="fa-light fa-money-bill-1 icon-card"></i></span><br>
+                                    <span>
+                                      <i class="fa-light fa-money-bill-1 icon-card"></i></span><br>
                                         Dinheiro
                                     </label>
                                 </div>
@@ -180,13 +190,15 @@
                                     <h5 class="fs-6">Cartões</h5>
                                     <input type="radio" class="btn-check" name="options-base" id="option1" autocomplete="off" checked>
                                     <label class="btn" for="option1">
-                                    <span><i class="fa-light fa-credit-card-front icon-card"></i></span><br>
+                                    <span>
+                                      <i class="fa-light fa-credit-card-front icon-card"></i></span><br>
                                         Cartão de credito
                                     </label>
                                     
-                                    <input type="radio" class="btn-check" name="options-base" id="option2" autocomplete="off" checked>
+                                    <input type="radio" class="btn-check" name="options-base" id="option2" autocomplete="off">
                                     <label class="btn btn-pagamento" for="option2">
-                                        <span><i class="fa-light  fa-credit-card icon-card"></i></span><br>
+                                        <span>
+                                        <i class="fa-light  fa-credit-card icon-card"></i></span><br>
                                         Cartão de debito
                                     </label>
                                 </div>
