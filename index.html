@@ -118,74 +118,90 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
                 </div>
             </div>
 
-            <div class="row my-2">
-                <div class="row w-75">
-                    <h5>Balanço Mensal</h5>
-                    
-                    <div id='card-importate'  class='card m-2 text-left important'>
-                        <div class='card-body'>
-                            <i class='bi bi-currency-exchange icon-card'></i>
-                            <h6 class='card-subtitle mb-2'>Saldo total</h6>
-                            <h6 class='card-subtitle card-price mb-2'>R$24,00</h6>
+            <div class="row my-2 p-2">
+                <div class="col-7">
+                    <div class="row">
+                        <div class='card m-2 pl-4 pr-5 card-banner'>
+                            <div class='card-body d-flex justify-content-between align-items-center p-2'>
+                                <div class="">
+                                    <h1 class='card-subtitle card-banner-title'>Olá Matheus Nunes</h1>
+                                    <h2 class='card-subtitle card-banner-subtitle'>
+                                        É um prazer ver você aqui novamente!
+                                    </h2>
+                                </div>
+                                <div class="img-container">
+                                    <img src="assent/vetor1.png" width="200" class="img-fluid img-vetor border-0" alt="...">
+                                 </div>                            
+                            </div>
                         </div>
-                    </div>
 
-                    <div class='card m-2 text-left important'>
-                        <div class='card-body'>
-                            <i class='bi bi-patch-plus-fill icon-card'></i>
-                            <h6 class='card-subtitle mb-2'>Entradas</h6>
-                            <h6 class='card-subtitle card-price  mb-2'>R$ 50,00</h6>
+                        <div id='card-importate'  class='card m-2 text-left important'>
+                            <div class='card-body'>
+                                <i class='bi bi-currency-exchange icon-card'></i>
+                                <h6 class='card-subtitle mb-2'>Saldo total</h6>
+                                <h6 class='card-subtitle card-price mb-2'>R$24,00</h6>
+                            </div>
                         </div>
+    
+                        <div class='card m-2 text-left important'>
+                            <div class='card-body'>
+                                <i class='bi bi-patch-plus-fill icon-card'></i>
+                                <h6 class='card-subtitle mb-2'>Entradas</h6>
+                                <h6 class='card-subtitle card-price  mb-2'>R$ 50,00</h6>
+                            </div>
+                        </div>
+                        <div class='card m-2 text-left important'>
+                            <div class='card-body'>
+                                <i class='bi bi-patch-minus-fill icon-card'></i>
+                                <div class='card-subtitle mb-2'>Saidas</div>
+                                <h6 class='card-subtitle card-price  mb-2'>R$ 26,00</h6>
+                            </div>
+                        </div>
+                        
                     </div>
-                    <div class='card m-2 text-left important'>
-                        <div class='card-body'>
-                            <i class='bi bi-patch-minus-fill icon-card'></i>
-                            <h6 class='card-subtitle mb-2'>Saidas</h6>
-                            <h6 class='card-subtitle card-price  mb-2'>R$ 26,00</h6>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class='card m-2 card-info'>
+                            <div class='card-body d-flex justify-content-between align-items-center p-2'>
+                                <h1 class='card-subtitle card-info-title'>3</h1>
+                                <h2 class='card-subtitle card-info-subtitle mx-1'>Vendas registradas</h2>
+                            </div>
+                        </div>
+                        <div class='card m-2 card-info mb-4'>
+                            <div class='card-body d-flex justify-content-between align-items-center p-2'>
+                                <h1 class='card-subtitle card-info-title'>1</h1>
+                                <h2 class='card-subtitle card-info-subtitle mx-1'>Venda incompleta</h2>
+                            </div>
+                        </div>
+                        <h5>Suas estatística</h5>
+                        <canvas style="max-width:400px; max-height: 200px" id="myChart"></canvas>
+                        <div class='card m-2 pl-4 pr-5 card-banner card-big-banner'>
+                            <div class='card-body d-flex justify-content-between align-items-center'>
+                                <div>
+                                    <h1 class='card-subtitle card-big-title'>Vender mais!</h1>
+                                    <h2 class='card-subtitle card-big-subtitle mt-1'>
+                                        É um prazer ver você aqui novamente!
+                                    </h2>
+                                    <a class="btn btn-action-bar btn-mini mt-1"> 
+                                        <span>Registrar venda</span>
+                                    </a>
+                                </div>
+                                <i class='fa-solid fa-messages-dollar icon-fa-big'></i>                          
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="row my-2">
-                <div class="row w-100">
+                <div class="row w-50">
                     <div class="col-7">
-                        <h5>Movimento Trimestral</h5>
-                        <canvas  style="max-width:600px; max-height: 200px"id="myChart"></canvas>
+                        
                     </div>
                 </div>
             </div>
-            <div class="row my-2">
-                <div class="row w-75">
-                    <h5>Ultimos Lançamentos</h5>
-                    <table id='table' class="table">
-                        <thead>
-                            <tr>
-                                <th class="container-form-check" scope="col">
-                                #
-                                </th>
-                                <th scope="col">Vendedor</th>
-                                <th scope="col">Valor</th>
-                                <th scope="col">Forma de Pagamento</th>
-                                <th scope="col">Data</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th class="container-form-check" scope="row">
-                                    1
-                                </th>
-                                <td>
-                                <img src="assent/perfil.jpg" width="50" class="img-thumbnail border rounded-pill" alt="...">
-                                Matheus
-                                </td>
-                                <td>R$25,00</td>
-                                <td>Cartão de credito</td>
-                                <td>12/10/2023</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -194,34 +210,25 @@ header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
         const ctx = document.getElementById('myChart');
 
         new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['Set','Nov','Dez'],
-            datasets: [{
-              label: 'Saidas',
-              data: [6,10,10],
-              borderWidth: 1,
-              borderRadius: 10,
-              borderSkipped: false,
-              borderColor: '#a03d99',
-              backgroundColor: '#ffffff',
-            },{
-              label: 'Entradas',
-              data: [15,15,20],
-              borderWidth: 1,
-              borderRadius: 10,
-              borderSkipped: false,
-              borderColor: '#ffffff',
-              backgroundColor: '#a03d99',
-            }]
-          },
-          options: {
-            scales: {
-              y: {
-                beginAtZero: true
-              }
+            type: 'line',
+            data: {
+                labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab', 'Dom'],
+                datasets: [{
+                    label: 'Vendas',
+                    data: [0,0,1,0,2,0,0],
+                    fill: false,
+                    tension: 0.1,
+                    borderColor: '#a03d99',
+                    backgroundColor: '#a03d99',
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
             }
-          }
         });
         
         let content = document.querySelector('.content-seach');
