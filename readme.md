@@ -33,7 +33,7 @@
   
 # Demostração do projeto ✨
 
-https://github.com/0XxMxX0/marketplace-template/assets/83671782/e7ea147a-9d43-439d-b64e-f7b37f2fecad
+https://github.com/0XxMxX0/marketplace-template/assets/83671782/ad821dc6-b65b-4b52-a5f6-a4309407a2c1
 
 # Tecnologias Utilizadas no Projeto 🌐
 
